@@ -322,30 +322,28 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	status_command i3status
+	status_command i3status --config ~/.i3/i3status.conf
 	position top
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+  tray_output none
+  separator_symbol 
 
 	bindsym button4 nop
 	bindsym button5 nop
-#   font xft:URWGothic-Book 11
+  font xft:Space Mono Nerd Font 13
 	strip_workspace_numbers yes
 
-    colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+  colors {
+      background #0d1117
+      statusline #c5cdd9
+      separator  #363a49
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
-    }
+#                         border  backgr. text
+      focused_workspace  #c5cdd9 #6cb6eb #161b22
+      active_workspace   #363a49 #21262d #FDF6E3
+      inactive_workspace #363a49 #0d1117 #EEE8D5
+      binding_mode       #6cb6eb #2C2C2C #c5cdd9
+      urgent_workspace   #6cb6eb #FDF6E3 #ec7279
+  }
 }
 
 # hide/unhide i3status bar
@@ -353,11 +351,11 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.focused          #363a49 #363a49 #6cb6eb #FDF6E3
+  client.focused_inactive #363a49 #363a49 #5699AF #363a49
+  client.unfocused        #363a49 #363a49 #5699AF #363a49
+  client.urgent           #ec7279 #FDF6E3 #5699AF #6cb6eb
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
 
