@@ -45,6 +45,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 exec --no-startup-id volumeicon
 exec --no-startup-id ckb-next -b
 exec --no-startup-id easyeffects -w
+exec --no-startup-id blueman-applet
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -59,9 +60,9 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec thunar
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+# bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
