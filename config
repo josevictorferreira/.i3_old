@@ -44,7 +44,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 exec --no-startup-id volumeicon
 exec --no-startup-id ckb-next -b
-exec --no-startup-id easyeffects -w
+exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id blueman-applet
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
