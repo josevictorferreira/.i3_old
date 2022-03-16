@@ -33,7 +33,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi_run
+bindsym $mod+d exec --no-startup-id /home/josevictor/.config/polybar/scripts/launcher.sh
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -42,6 +42,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
+exec --no-startup-id start_polybar
 exec --no-startup-id volumeicon
 exec --no-startup-id ckb-next -b
 exec --no-startup-id easyeffects --gapplication-service
@@ -324,30 +325,30 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status --config ~/.i3/i3status.conf
-	position top
-  separator_symbol 
-
-	bindsym button4 nop
-	bindsym button5 nop
-  font xft:Space Mono Nerd Font 13
-	strip_workspace_numbers yes
-
-  colors {
-      background #0d1117
-      statusline #c5cdd9
-      separator  #363a49
-
-#                         border  backgr. text
-      focused_workspace  #c5cdd9 #6cb6eb #161b22
-      active_workspace   #363a49 #21262d #FDF6E3
-      inactive_workspace #363a49 #0d1117 #EEE8D5
-      binding_mode       #6cb6eb #2C2C2C #c5cdd9
-      urgent_workspace   #6cb6eb #FDF6E3 #ec7279
-  }
-}
+# bar {
+# 	i3bar_command i3bar
+# 	status_command i3status --config ~/.i3/i3status.conf
+# 	position top
+#   separator_symbol 
+#
+# 	bindsym button4 nop
+# 	bindsym button5 nop
+#   font xft:Space Mono Nerd Font 13
+# 	strip_workspace_numbers yes
+#
+#   colors {
+#       background #0d1117
+#       statusline #c5cdd9
+#       separator  #363a49
+#
+# #                         border  backgr. text
+#       focused_workspace  #c5cdd9 #6cb6eb #161b22
+#       active_workspace   #363a49 #21262d #FDF6E3
+#       inactive_workspace #363a49 #0d1117 #EEE8D5
+#       binding_mode       #6cb6eb #2C2C2C #c5cdd9
+#       urgent_workspace   #6cb6eb #FDF6E3 #ec7279
+#   }
+# }
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
