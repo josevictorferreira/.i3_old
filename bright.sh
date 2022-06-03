@@ -11,13 +11,13 @@ current_brightness () {
 notify_up () {
   bright="$1"
   bright_share=$(echo "$bright * 100" | bc -l)
-  notify-send "Brightness up to $bright_share%."
+  notify-send -t 1000 "Brightness up to $bright_share%."
 }
 
 notify_down () {
   bright="$1"
   bright_share=$(echo "$bright * 100" | bc -l)
-  notify-send "Brightness down to $bright_share%."
+  notify-send -t 1000 "Brightness down to $bright_share%."
 }
 
 increase_brightness () {
